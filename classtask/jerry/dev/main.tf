@@ -1,5 +1,5 @@
 module "ec2" {
-  source = "github.com/aKumoSolutions/apr2025-terraform-session//classtask/modules/ec2" // Where the child module is. You can call child modules locally or remotely
+  source = "github.com/aKumoSolutions/apr2025-terraform-session//classtask/modules/ec2?ref=v1.0.0" // Where the child module is. You can call child modules locally or remotely
 ############## Input Variables ##################
   ami = "ami-01102c5e8ab69fb75"
   instance_type = "t3.micro"
@@ -8,7 +8,7 @@ module "ec2" {
 }
 
 module "sg" {
-  source = "github.com/aKumoSolutions/apr2025-terraform-session//classtask/modules/sg"
+  source = "github.com/aKumoSolutions/apr2025-terraform-session//classtask/modules/sg?ref=v1.0.0"
 ############## Input Variables ##################
   name = "terraform-module-sg-main"
   description = "This is a security group for terraform instance"
